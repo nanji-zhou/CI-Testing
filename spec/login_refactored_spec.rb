@@ -4,15 +4,16 @@ describe "User Login" do
   include TestHelper
 
   before(:all) do
-    @browser = $browser = Selenium::WebDriver.for(browser_type)
+    @browser = $browser = Selenium::WebDriver.for(:ie)
     @browser.navigate.to(site_url)
   end
 
   after(:all) do
     @browser.quit unless debugging?
+	
   end
 
-  it "Can sign in OK" do
+  it "zml Can sign in OK" do
     goto_page("/login")
     login_page = LoginPage.new(@browser)
     login_page.login("agileway", "testwise")  

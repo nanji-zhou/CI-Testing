@@ -14,6 +14,7 @@ Dir["#{File.dirname(__FILE__)}/pages/*_page.rb"].each { |file| load file }
 
 # The default base URL for running from command line or continuous build process
 $BASE_URL = "http://agiletravel.herokuapp.com"
+$TESTWISE_PROJECT_BASE_URL="http://agiletravel.herokuapp.com"
 
 # This is the helper for your tests, every test file will include all the operation
 # defined here.
@@ -27,6 +28,7 @@ module TestHelper
       $TESTWISE_BROWSER.downcase.to_sym
     else
       RUBY_PLATFORM =~ /mingw/ ? "ie".to_sym : "firefox".to_sym
+	  
     end
   end
   alias the_browser browser_type

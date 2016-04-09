@@ -2,7 +2,7 @@ require 'rubygems'
 require 'selenium-webdriver'
 require 'rspec'
 require 'pry'
-$TESTWISE_BROWSER = "ie"
+$TESTWISE_BROWSER = "firefox"
 
 # use utils in RWebSpec and better integration with TestWise
 require "#{File.dirname(__FILE__)}/rwebspec_utils.rb"

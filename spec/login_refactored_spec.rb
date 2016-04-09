@@ -4,7 +4,7 @@ describe "User Login" do
   include TestHelper
 
   before(:all) do
-    @browser = $browser = Selenium::WebDriver.for(:ie)
+    @browser = $browser = Selenium::WebDriver.for(browser_type)
     @browser.navigate.to(site_url)
   end
 

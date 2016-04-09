@@ -6,6 +6,7 @@ gem 'ci_reporter'
 gem 'rspec'
 require 'rspec/core/rake_task'
 require 'ci/reporter/rake/rspec' # use this if you're using RSpec
+require 'pry'
 
 task :default => ["go"]
 

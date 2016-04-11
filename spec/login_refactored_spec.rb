@@ -18,7 +18,7 @@ describe "User Login_Refactored" do
     login_page = LoginPage.new(@browser)
     login_page.login("agileway", "testwise")  
     # selenium does not have browser.text yet
-    try_for(3) {  @browser.page_source.include?("WelcomeX").should == true }
+    try_for(3) {  @browser.page_source.include?("Welcome").should == true }
     @browser.find_element(:link_text, "Sign off").click
   end
 
